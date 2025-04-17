@@ -27,7 +27,13 @@
       <!-- Spotify embed -->
       <div class="mb-6 w-full max-w-md">
         <h2 class="text-xl font-semibold mb-2">🎧 Now Playing</h2>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1iRIdATb1I276VdKK7JVAB?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="bg-gray-50 rounded-lg p-4 shadow-md">
+          <audio controls autoplay loop class="w-full" preload="auto">
+            <source src="https://p.scdn.co/mp3-preview/f9613d9a5c3c24e1d1b2e8a0b4da0c5156f42970" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <p class="text-center mt-2 text-sm text-gray-600">Shape of You - Ed Sheeran</p>
+        </div>
       </div>
 
       <!-- About Me -->
