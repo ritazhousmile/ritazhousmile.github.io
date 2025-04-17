@@ -27,18 +27,22 @@
       <!-- Spotify embed -->
       <div class="mb-6 w-full max-w-md">
         <h2 class="text-xl font-semibold mb-2">🎧 Now Playing</h2>
-        <div class="rounded-lg overflow-hidden shadow-md">
-          <iframe 
-            style="border-radius:12px" 
-            src="https://open.spotify.com/embed/track/1iRIdATb1I276VdKK7JVAB?utm_source=generator&autoplay=1" 
-            width="100%" 
-            height="152" 
-            frameBorder="0" 
-            allowfullscreen="" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy">
-          </iframe>
-          <p class="text-xs text-center text-gray-500 mt-1 italic">Note: Log into Spotify Premium for full song playback</p>
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 shadow-md">
+          <div class="flex items-center mb-2">
+            <img src="https://i.scdn.co/image/ab67616d0000b273cdf7d9dd353ea7d9e7eaccb3" alt="JENNIE - F.T.S." class="w-12 h-12 rounded-md mr-3">
+            <div>
+              <h3 class="font-medium text-gray-800">F.T.S.</h3>
+              <p class="text-xs text-gray-600">JENNIE</p>
+            </div>
+          </div>
+          <audio id="musicPlayer" controls autoplay loop class="w-full" preload="auto">
+            <source src="https://p.scdn.co/mp3-preview/07c6c33d6426d0dc01c0089c81ea484c50163ccd" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <script>
+            document.getElementById('musicPlayer').volume = 0.7;
+            document.getElementById('musicPlayer').play();
+          </script>
         </div>
       </div>
 
@@ -48,7 +52,7 @@
         <p class="text-sm text-gray-700 leading-relaxed">
         I'm a passionate web developer with a background in English literature 📚 turned tech enthusiast.<br>
         I build on the web with curiosity, creativity, and a desire to understand how technology shapes the way we live. 🌐<br>
-        Right now, I’m exploring new possibilities by learning different kinds of languages and taking computer science classes — reshaping my mind from a world of humanities to one of scientific logic        </p>
+        Right now, I'm exploring new possibilities by learning different kinds of languages and taking computer science classes — reshaping my mind from a world of humanities to one of scientific logic        </p>
       </div>
 
       <!-- Learning -->
@@ -71,7 +75,7 @@
 
       <!-- Footer quote -->
       <p class="mt-8 text-xs text-gray-400 italic">
-        “Write code as if the next person to maintain it is a poet.”
+        "Write code as if the next person to maintain it is a poet."
       </p>
     </div>
   </body>
