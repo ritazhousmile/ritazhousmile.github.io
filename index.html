@@ -4,19 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rita Zhou</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   </head>
-  <body class="bg-white text-gray-800 font-sans">
+  <body class="bg-gradient-to-br from-blue-50 via-white to-pink-50 text-gray-800 font-sans">
     <div class="min-h-screen flex flex-col items-center justify-center p-8">
       <!-- Avatar -->
-      <img
-        src="https://github.com/ritazhousmile.png"
-        alt="Rita Zhou"
-        class="w-40 h-40 rounded-full shadow-lg mb-4"
-      />
+      <img src="https://github.com/ritazhousmile.png" alt="Rita Zhou" class="w-32 h-32 rounded-full shadow-lg mb-4" />
 
       <!-- Welcome message -->
       <h1 class="text-3xl font-bold mb-2">Hi, I'm Rita Zhou</h1>
@@ -33,22 +26,36 @@
 
       <!-- Spotify embed -->
       <div class="mb-6 w-full max-w-md">
-        <iframe
-          style="border-radius: 12px"
-          src="https://open.spotify.com/embed/album/1vWMw6pu3err6qqZzI3RhH?utm_source=generator"
-          width="100%"
-          height="380"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
+        <h2 class="text-xl font-semibold mb-2">🎧 Now Playing</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1iRIdATb1I276VdKK7JVAB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
 
-      <!-- Contact info -->
-      <div class="text-center text-sm text-gray-500">
-        <p>Email: <a href="mailto:youremail@example.com" class="text-blue-500 hover:underline">ritazhousmile@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/ritazhousmile" class="text-blue-500 hover:underline">@ritazhousmile</a></p>
+      <!-- About Me -->
+      <div class="max-w-xl text-center mb-8">
+        <h2 class="text-xl font-semibold mb-2">🧑‍💻 About Me</h2>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          I'm a web developer who codes like a poet — blending logic with language, and structure with soul. 📚<br>
+          I build on the web with curiosity, creativity, and a desire to understand how technology shapes the way we live. 🌐<br>
+          Right now, I'm exploring new possibilities by learning different kinds of languages and taking computer science classes — trying to transform my brain from a humanitarian world to a science logic world.
+        </p>
+      </div>
+
+      <!-- Learning -->
+      <h2 class="text-xl font-semibold mb-2">📚 Currently Learning</h2>
+      <p class="text-sm text-gray-600 mb-6">Docker · AWS Cloud · LeetCode Daily · System Design</p>
+
+      <!-- Projects -->
+      <div class="mt-4 w-full max-w-md">
+        <h2 class="text-xl font-semibold mb-4">🛠️ Featured Projects</h2>
+        <li><a href="https://github.com/ritazhousmile/serverless-stack-api" target="_blank">📁 Serverless Stack API – Backend API built with serverless framework</a></li>
+
+</ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="mt-10 flex space-x-4">
+        <a href="mailto:youremail@example.com" class="text-sm px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600">Email Me</a>
+        <a href="https://www.linkedin.com/in/yourname" class="text-sm px-4 py-2 rounded bg-gray-700 text-white hover:bg-black">LinkedIn</a>
       </div>
 
       <!-- Footer quote -->
