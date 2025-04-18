@@ -5,29 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rita Zhou</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+      }
+      .tech-pill {
+        transition: all 0.3s ease;
+      }
+      .tech-pill:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      }
+      .avatar-glow {
+        box-shadow: 0 0 25px rgba(66, 153, 225, 0.5);
+        animation: pulse 3s infinite;
+      }
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(66, 153, 225, 0.4); }
+        70% { box-shadow: 0 0 0 15px rgba(66, 153, 225, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(66, 153, 225, 0); }
+      }
+      .fancy-heading {
+        background: linear-gradient(90deg, #3182ce, #d53f8c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
   </head>
-  <body class="bg-gradient-to-br from-blue-50 via-white to-pink-50 text-gray-800 font-sans">
+  <body class="min-h-screen">
     <div class="min-h-screen flex flex-col items-center justify-center p-8">
       <!-- Avatar -->
-      <img src="https://github.com/ritazhousmile.png" alt="Rita Zhou" class="w-32 h-32 rounded-full shadow-lg mb-4" />
+      <img src="https://github.com/ritazhousmile.png" alt="Rita Zhou" class="w-32 h-32 rounded-full shadow-lg mb-6 border-2 border-white avatar-glow" />
 
       <!-- Welcome message -->
-      <h1 class="text-3xl font-bold mb-2">Hi, I'm Rita Zhou</h1>
-      <p class="text-lg text-gray-600 mb-4">Welcome to my developer space.</p>
+      <h1 class="text-4xl font-bold mb-2 fancy-heading">Hi, I'm Rita Zhou</h1>
+      <p class="text-lg text-gray-600 mb-6">Welcome to my developer space.</p>
 
       <!-- Tech stack -->
-      <div class="flex flex-wrap justify-center gap-2 mb-6">
-        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm">Java</span>
-        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm">Python</span>
-        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm">Node.js</span>
-        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm">C</span>
-        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm">HTML/CSS</span>
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <span class="bg-gradient-to-r from-blue-100 to-blue-200 px-4 py-2 rounded-full text-sm font-medium text-blue-800 tech-pill">Java</span>
+        <span class="bg-gradient-to-r from-yellow-100 to-yellow-200 px-4 py-2 rounded-full text-sm font-medium text-yellow-800 tech-pill">Python</span>
+        <span class="bg-gradient-to-r from-green-100 to-green-200 px-4 py-2 rounded-full text-sm font-medium text-green-800 tech-pill">Node.js</span>
+        <span class="bg-gradient-to-r from-red-100 to-red-200 px-4 py-2 rounded-full text-sm font-medium text-red-800 tech-pill">C</span>
+        <span class="bg-gradient-to-r from-purple-100 to-purple-200 px-4 py-2 rounded-full text-sm font-medium text-purple-800 tech-pill">HTML/CSS</span>
       </div>
 
       <!-- Spotify embed -->
-      <div class="mb-6 w-full max-w-md">
-        <h2 class="text-xl font-semibold mb-2">🎧 Now Playing</h2>
-        <div class="rounded-lg overflow-hidden shadow-md">
+      <div class="mb-10 w-full max-w-lg">
+        <h2 class="text-xl font-semibold mb-3 text-center">🎧 Now Playing</h2>
+        <div class="rounded-xl overflow-hidden shadow-lg">
           <iframe 
             width="100%" 
             height="166" 
@@ -41,34 +77,54 @@
       </div>
 
       <!-- About Me -->
-      <div class="max-w-xl text-center mb-8">
-        <h2 class="text-xl font-semibold mb-2">🧑‍💻 About Me</h2>
-        <p class="text-sm text-gray-700 leading-relaxed">
-        I'm a passionate web developer with a background in English literature 📚 turned tech enthusiast.<br>
-        I build on the web with curiosity, creativity, and a desire to understand how technology shapes the way we live. 🌐<br>
-        Right now, I'm exploring new possibilities by learning different kinds of languages and taking computer science classes — reshaping my mind from a world of humanities to one of scientific logic        </p>
+      <div class="max-w-xl text-center mb-10 glass-card p-6 rounded-xl">
+        <h2 class="text-xl font-semibold mb-4 fancy-heading">👩‍💻 About Me</h2>
+        <p class="text-gray-700 leading-relaxed">
+        📚 From literature to tech 🌐 — reshaping my mind from a world of humanities to one of scientific logic.<br><br>
+        With a foundation in analyzing narratives and understanding human experiences, I bring a unique perspective to software development. I'm passionate about building intuitive interfaces and solving problems through clean, thoughtful code.
+        </p>
       </div>
 
       <!-- Learning -->
-      <h2 class="text-xl font-semibold mb-2">📚 Currently Learning</h2>
-      <p class="text-sm text-gray-600 mb-6">AWS Cloud, GCP, LeetCode Daily, System Design</p>
+      <div class="glass-card p-6 rounded-xl mb-10 w-full max-w-lg">
+        <h2 class="text-xl font-semibold mb-4 text-center fancy-heading">📚 Currently Learning</h2>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-md text-sm">AWS Cloud</span>
+          <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-md text-sm">GCP</span>
+          <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-md text-sm">LeetCode Daily</span>
+          <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-md text-sm">System Design</span>
+        </div>
+      </div>
 
       <!-- Projects -->
-      <div class="mt-4 w-full max-w-md">
-        <h2 class="text-xl font-semibold mb-4">🛠️ Featured Projects</h2>
-        <li><a href="https://github.com/ritazhousmile/serverless-stack-api" target="_blank">📁 Serverless Stack API – Backend API built with serverless framework</a></li>
-
-</ul>
+      <div class="glass-card p-6 rounded-xl mb-10 w-full max-w-lg">
+        <h2 class="text-xl font-semibold mb-4 text-center fancy-heading">🛠️ Featured Projects</h2>
+        <ul class="space-y-3">
+          <li class="hover:bg-white p-3 rounded-lg transition-all duration-300">
+            <a href="https://github.com/ritazhousmile/serverless-stack-api" target="_blank" class="flex items-center">
+              <span class="text-blue-600 mr-2">📁</span>
+              <span>Serverless Stack API – Backend API built with serverless framework</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <!-- Contact -->
-      <div class="mt-10 flex space-x-4">
-        <a href="mailto:ritazhousmile@gmail.com" class="text-sm px-6 py-2.5 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>Email Me</a>
-        <a href="https://www.linkedin.com/in/ritazhousmile" class="text-sm px-6 py-2.5 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 text-white hover:from-gray-800 hover:to-black shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>LinkedIn</a>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="mailto:ritazhousmile@gmail.com" class="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/ritazhousmile" class="px-6 py-3 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 text-white hover:from-gray-800 hover:to-black shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>LinkedIn
+        </a>
       </div>
 
       <!-- Footer quote -->
-      <p class="mt-8 text-xs text-gray-400 italic">
+      <p class="mt-10 text-xs text-gray-500 italic glass-card px-6 py-3 rounded-full">
         "Write code as if the next person to maintain it is a poet."
       </p>
     </div>
